@@ -7,18 +7,18 @@ const app = express()
 app.set('veiw engine', 'ejs')
 
 //connecting MySQL server database
-const con = sql.createConnection({
-    host: '',
-    username: '',
-    password: ''
-})
+// const con = sql.createConnection({
+//     host: '',
+//     username: '',
+//     password: ''
+// })
 
-con.connect(err => {
-    if (err) throw err
-    console.log(`MySQL succesfully connected.`)
-})
+// con.connect(err => {
+//     if (err) throw err
+//     console.log(`MySQL succesfully connected.`)
+// })
 
-app.use('/', require('./routers'))
+app.use('/', require('./routes'))
 
 
 //Variable for port 
