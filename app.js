@@ -1,8 +1,24 @@
 const express = require('express')
+const sql = require('mysql')
 
 const app = express()
 
-app.use('/api', require('./routers/products'))
+//подключение views:
+app.set('veiw engine', 'ejs')
+
+//connecting MySQL server database
+const con = sql.createConnection({
+    host: '',
+    username: '',
+    password: ''
+})
+
+con.connect(err => {
+    if (err) throw err
+    console.log(`MySQL succesfully connected.`)
+})
+
+app.use('/', require('./routers'))
 
 
 //Variable for port 
