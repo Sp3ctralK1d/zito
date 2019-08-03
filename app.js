@@ -10,7 +10,8 @@ app.set('veiw engine', 'ejs')
 const con = sql.createConnection({
     host: 'localhost',
     username: 'p-193_user',
-    password: '@Samal001'
+    password: '@Samal001',
+    database: 'p-19304_dbase'
 })
 
 con.connect(err => {
