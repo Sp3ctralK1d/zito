@@ -14,8 +14,8 @@ const con = sql.createConnection({
 })
 
 con.connect(err => {
-    if (err) throw err
-    console.log(`MySQL succesfully connected.`)
+    if (err) res.send(err)
+    resizeBy.send(`MySQL succesfully connected.`)
 })
 
 app.use('/', require('./routes'))
