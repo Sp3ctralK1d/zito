@@ -3,8 +3,6 @@ const router = require('express').Router()
 router.get('/', (req, res) => {
     //Достаем список всех категорий
     //Достаем список подкатегорий с прикрепленными категории
-
-    res.send("hello world")
     
 })
 
